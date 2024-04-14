@@ -1,7 +1,6 @@
-
 import java.util.Scanner;
 
-public class Main {
+public class ResolucaoProf {
     public static void main(String[] args) {
         //Tela abertura
         String nameBank = """
@@ -37,33 +36,39 @@ public class Main {
         System.out.println("Saldo inicial:      " + saldoCliente);
         System.out.println("***************************************");
 
-        System.out.println("           ESCOLHA UMA OPÇÃO           ");
-        System.out.println("1 - Consultar Saldo");
-        System.out.println("2 - Receber Valor");
-        System.out.println("3 - Transferir Valor");
-        System.out.println("4 - Sair");
-        escolhaMenu = leitura.nextInt();
+        String menu = """
+                
+                          ESCOLHA UMA OPÇÃO          
+                  1 - Consultar Saldo
+                  2 - Receber Valor
+                  3 - Transferir Valor
+                  4 - Sair
+                """;
 
-        //Menu de operações
-        if (escolhaMenu < 4){
-            System.out.println("Seu saldo é de: " + saldoCliente);
-        } else if (escolhaMenu == 2) {
-            System.out.println("Digite o valor a receber: ");
-            recebeValor = leitura.nextDouble();
-            saldoCliente = saldoCliente + recebeValor;
-            System.out.println("Seu saldo atualizado é de: " + saldoCliente);
-        } else if (escolhaMenu == 3) {
-            System.out.println("Digite o valor para tranferência: ");
-            transfereValor = leitura.nextDouble();
+        while (escolhaMenu != 4){
+            System.out.println(menu);
+            escolhaMenu = leitura.nextInt();
+
+            if (escolhaMenu == 1){
+                System.out.println("Seu saldo é de: " + saldoCliente);
+            } else if (escolhaMenu == 2) {
+                System.out.println("Digite o valor a receber: ");
+                recebeValor = leitura.nextDouble();
+                saldoCliente = saldoCliente + recebeValor;
+                System.out.println("Seu saldo atualizado é de: " + saldoCliente);
+            } else if (escolhaMenu == 3) {
+                System.out.println("Digite o valor para tranferência: ");
+                transfereValor = leitura.nextDouble();
                 if (saldoCliente <= transfereValor){
                     System.out.println("Não há saldo suficiente para fazer essa " +
-                        "transferência");
-            }   else {
+                            "transferência");
+                }   else {
                     saldoCliente = saldoCliente - transfereValor;
+                }
+                System.out.println("Seu saldo atualizado é de: " + saldoCliente);
             }
-            System.out.println("Seu saldo atualizado é de: " + saldoCliente);
-        } else {
-            System.out.println("Saindo...");
+
+            }
         }
+
     }
-}
