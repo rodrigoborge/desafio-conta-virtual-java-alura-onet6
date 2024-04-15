@@ -15,25 +15,25 @@ public class Main {
 
         //Variáveis
         String nomeCliente;
-        String tipoCconta;
+        String tipoConta;
         double saldoCliente;
         double recebeValor;
         double transfereValor;
-        int escolhaMenu = 0;
+        int escolhaMenu;
         Scanner leitura = new Scanner(System.in);
 
         //Entrada de dados
         System.out.println("Digite o nome do cliente: ");
         nomeCliente = leitura.nextLine();
         System.out.println("Qual o tipo da conta: ");
-        tipoCconta = leitura.nextLine();
+        tipoConta = leitura.nextLine();
         System.out.println("Digite o saldo inicial: ");
         saldoCliente = leitura.nextDouble();
 
         //Retorno dos dados
         System.out.println("***************************************");
         System.out.println("Nome:               " + nomeCliente);
-        System.out.println("Tipo de conta:      " + tipoCconta);
+        System.out.println("Tipo de conta:      " + tipoConta);
         System.out.println("Saldo inicial:      " + saldoCliente);
         System.out.println("***************************************");
 
