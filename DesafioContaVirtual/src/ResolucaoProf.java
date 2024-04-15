@@ -9,6 +9,7 @@ public class ResolucaoProf {
                 |  _  ||  _  ||     ||    <  |  _  ||  _  ||  _  |
                 |_____||___._||__|__||__|__| |___._||   __||   __|
                                                     |__|   |__|
+                                                    
                 """;
         System.out.printf (nameBank);
 
@@ -36,9 +37,9 @@ public class ResolucaoProf {
         System.out.println("Saldo inicial:      " + saldoCliente);
         System.out.println("***************************************");
 
-        String menu = """
+        String telaMenu = """
                 
-                          ESCOLHA UMA OPÇÃO          
+                  ********** ESCOLHA UMA OPÇÃO **********
                   1 - Consultar Saldo
                   2 - Receber Valor
                   3 - Transferir Valor
@@ -46,7 +47,7 @@ public class ResolucaoProf {
                 """;
 
         while (escolhaMenu != 4){
-            System.out.println(menu);
+            System.out.println(telaMenu);
             escolhaMenu = leitura.nextInt();
 
             if (escolhaMenu == 1){
